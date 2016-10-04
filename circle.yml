@@ -32,13 +32,13 @@ deployment:
   aws:
     branch: master
     codedeploy:
-      middleman:
+      cka-app:
         application_root: /
         revision_location:
           revision_type: S3
           s3_location:
             bucket: cka-bucket
             key_pattern: cka-app-{SHORT_COMMIT}-{BUILD_NUM}.tar.gz
-        region: us-west-1
+        region: us-east-1
         deployment_group: cka-group
         deployment_config: CodeDeployDefault.OneAtATime
